@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="14dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="o"
+        android:textColor="@color/Neon"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/currentMinTemp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="14dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+
+        android:fontFamily="@font/open_sans_bold"
+        android:text="o"
+        android:textColor="@color/Neon"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/currentMinTemp"
+        app:layout_constraintTop_toTopOf="@+id/currentMaxTemp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:fontFamily="@font/bitter_bold"
+        android:text="O"
+        android:textColor="@color/Neon"
+        android:textSize="96sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_test_temp"
+        app:layout_constraintTop_toTopOf="@+id/textView_test_temp" />
+
+    <TextView
+        android:id="@+id/city_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView_test_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bitter_bold"
+        android:includeFontPadding="false"
+        android:text="@string/current_temp"
+
+        android:textColor="@color/Neon"
+        android:textSize="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_textView" />
+
+    <TextView
+        android:id="@+id/currentDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/current_weather_description"
+        android:textColor="@color/Neon"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/currentMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/current_temp_max"
+        android:textColor="@color/Neon"
+
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currentDescription"
+        app:layout_constraintEnd_toStartOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/currentMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/current_min_temp"
+        android:textColor="@color/Neon"
+        android:textSize="20sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/currentMaxTemp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/WindBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/open_sans_semibold"
+
+        android:text="Wind :"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@+id/currentDescription"
+        app:layout_constraintTop_toBottomOf="@+id/currentDescription" />
+
+    <TextView
+        android:id="@+id/windSpeedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="2"
+        android:textColor="@color/Neon"
+
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/wind_speed_value"
+        app:layout_constraintBaseline_toBaselineOf="@+id/WindBox"
+        app:layout_constraintStart_toEndOf="@+id/WindBox" />
+
+    <TextView
+        android:id="@+id/humidityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:textColor="@color/colorPrimary"
+
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Humidity :"
+        app:layout_constraintStart_toStartOf="@+id/WindBox"
+        app:layout_constraintTop_toBottomOf="@+id/WindBox" />
+
+    <TextView
+        android:id="@+id/currentHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="3"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/current_humidity_value"
+        android:textSize="14sp"
+        android:textColor="@color/Neon"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/humidityLabel"
+        app:layout_constraintStart_toEndOf="@+id/humidityLabel" />
+
+    <TextView
+        android:id="@+id/pressureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/colorPrimary"
+
+        android:text="@string/current_pressure_label"
+        app:layout_constraintStart_toStartOf="@+id/humidityLabel"
+        app:layout_constraintTop_toBottomOf="@+id/humidityLabel" />
+
+    <TextView
+        android:id="@+id/currentPressure"
+        android:layout_width="wrap_content"
+        android:textColor="@color/Neon"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="3"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/current_pressure_value"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pressureLabel"
+        app:layout_constraintStart_toEndOf="@+id/pressureLabel" />
+
+    <TextView
+        android:id="@+id/uvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/colorPrimary"
+
+        android:text="@string/uv_index_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pressureLabel"
+        app:layout_constraintEnd_toStartOf="@+id/currentUvIndex" />
+
+    <TextView
+        android:id="@+id/currentUvIndex"
+        android:layout_width="wrap_content"
+        android:textColor="@color/Neon"
+
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_weight="3"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/current_uv_index_value"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/uvLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/visibilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/colorPrimary"
+
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/current_visibility_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/WindBox"
+        app:layout_constraintEnd_toStartOf="@+id/currentVisibility" />
+
+    <TextView
+        android:id="@+id/currentVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/Neon"
+
+        android:layout_weight="3"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/current_visibility_value"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/visibilityLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/cloudsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+
+        android:layout_marginEnd="8dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/clouds_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/humidityLabel"
+        app:layout_constraintEnd_toStartOf="@+id/currentClouds" />
+
+    <TextView
+        android:id="@+id/currentClouds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_weight="3"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/current_cloud_percentage"
+        android:textColor="@color/Neon"
+
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cloudsLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/open_sans"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/city_textView"
+        app:layout_constraintStart_toEndOf="@+id/city_textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_location" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="startSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_name" />
+</android.support.constraint.ConstraintLayout>
